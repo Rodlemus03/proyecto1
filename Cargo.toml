@@ -4,7 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+gilrs = "0.9"
 nalgebra-glm = "0.18.0"
 minifb = "0.26.0"
 rodio = "0.14.0"
 minimp3 = "0.5.1"
+image = "0.24"
