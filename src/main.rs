@@ -88,7 +88,7 @@ fn dibujar_celdas(framebuffer: &mut Framebuffer, xo: usize, yo: usize, tamaño_b
         return;
     }
 
-    framebuffer.set_current_color(0x87CEFA); // Color celda
+    framebuffer.set_current_color(0xFF9900); // Color celda
 
     for x in xo..xo + tamaño_block {
         for y in yo..yo + tamaño_block {
@@ -151,7 +151,7 @@ fn render3d(framebuffer: &mut Framebuffer, player: &Player) {
     let hw = framebuffer.width as f32 / 2.0;
     let hh = framebuffer.height as f32 / 2.0;
 
-    framebuffer.set_current_color(0xFFFFFF); // Blanco
+    framebuffer.set_current_color(0x2F4F4F); // Blanco
 
     for i in 0..num_rays {
         let ray_actual = i as f32 / num_rays as f32;
@@ -165,7 +165,7 @@ fn render3d(framebuffer: &mut Framebuffer, player: &Player) {
         let stake_t = (hh - (altura_stake / 2.0)) as usize;
         let stake_b = (hh + (altura_stake / 2.0)) as usize;
 
-        framebuffer.set_current_color(0xFFFFFF); // Blanco
+        framebuffer.set_current_color(0x2F4F4F); // Blanco
 
         if stake_t < framebuffer.height && stake_b <= framebuffer.height {
             for y in stake_t..stake_b {
@@ -196,7 +196,7 @@ fn main() {
         pos: Vec2::new(150.0, 150.0),
         a: PI / 3.0,
         fov: PI / 3.0,
-        last_mouse_x: 0.0, // Inicializa esto
+        last_mouse_x: 0.0,  
     };
 
     let (_stream, handle) = rodio::OutputStream::try_default().unwrap();
